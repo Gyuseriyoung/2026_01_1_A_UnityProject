@@ -429,7 +429,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -273.10004, y: -329.40002, z: -182.20001}
-  m_LocalScale: {x: 1.2839274, y: 0.74352986, z: 0.74352986}
+  m_LocalScale: {x: 1.2839274, y: 0.7435298, z: 0.7435298}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1758440532}
@@ -1721,8 +1721,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -217.60196, y: 99.08929}
+  m_SizeDelta: {x: 180.796, y: 51.8215}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2113050284
 MonoBehaviour:
@@ -1746,10 +1746,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 30
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1757,7 +1757,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "\uB3CC \uAD74\uB7EC\uAC00\uC720"
 --- !u!222 &2113050285
 CanvasRenderer:
   m_ObjectHideFlags: 0
