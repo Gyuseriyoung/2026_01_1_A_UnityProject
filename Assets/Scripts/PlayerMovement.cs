@@ -1,10 +1,14 @@
-using UnityEngine;
 
+using UnityEngine;
+using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5.0f;
     public float jumpForce = 5.0f;
-    
+    // public int Health = 100;
+
+    public Text coinUI;
+    // public Text HealthUI;
     public Rigidbody rb;
 
     public bool isGrounded = true;      //땅 위에 있는지 체크하는변수 
@@ -13,7 +17,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        
+        /* Health = Health + 100;
+        HealthUI.text = Health.ToString();
+        */
     }
 
     void Update()
@@ -21,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal"); //수평 이동 (키값을 받아옴, -1 ~ 1)
         float moveVertical = Input.GetAxis("Vertical");   //수직 이동   (동일)
 
+        //coinUI.text = coinCount.ToString();
         //강체의 속도의 값 변경 = 캐릭터 이동
         rb.linearVelocity = new Vector3(moveHorizontal * moveSpeed, rb.linearVelocity.y, moveVertical * moveSpeed);
 
@@ -30,6 +37,11 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);     //위쪽 방향으로 설정한 힘수치만큼 순간적으로 힘을 가함
             isGrounded = false;                                         //점프를 하는 순간 땅에서 떨어졌기 때문에 False로
         }
+        /*if (Health < 0)
+        {
+            Destroy (this.gameObject);
+        }
+        */
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -44,7 +56,17 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag ("Coin"))
         {
             coinCount++;
+            // Health = Health +5;
+            coinUI.text = coinCount.ToString();
+            // HealthUI.text = Health.ToString();
+            
+
             Destroy(other.gameObject);
         }
+        /*if (other.CompareTag("Missile"))
+        {
+            Health = Health -20;
+            HealthUI.text = Health.ToString();
+        }*/
     }
 }
